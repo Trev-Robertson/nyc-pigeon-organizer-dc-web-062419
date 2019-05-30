@@ -14,6 +14,9 @@ def nyc_pigeon_organizer(data)
             
             pigeon_list[name] = {}
           end
+          
+           if data[attributes][adjective].include?(name)
+             pigeon_list[name][attributes]=[]
     	end
       end
     end
