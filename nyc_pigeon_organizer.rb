@@ -5,15 +5,18 @@ def nyc_pigeon_organizer(data)
   
     data.each do |attributes, types|
       
-      types.each do |adjective, name|
-    
+      types.each do |adjective, name_array|
+    	
+    	name_array.each do |name|
+
+
           if pigeon_list[name].nil?
             
-            pigeon_list << name
+            pigeon_list[name] = {}
           end
-    
+    	end
       end
     end
-  
+  pigeon_list
   
 end
