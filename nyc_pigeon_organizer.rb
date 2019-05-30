@@ -12,11 +12,16 @@ def nyc_pigeon_organizer(data)
 
           if pigeon_list[name].nil?
             
-            pigeon_list[name] = {"#{attributes}": ["#{adjective}"]}
-          else
+            	pigeon_list[name] = {"#{attributes}": ["#{adjective}"]}
           
-          # if data[attributes][adjective].include?(name)
-          #   pigeon_list[name][attributes]=[]
+          elsif 
+          		pigeon_list[name][attributes].nil?
+
+          		pigeon_list[name][attributes]=["#{adjective}"]
+
+          elsif 
+          		data[attributes][adjective].include?(name)
+          	   pigeon_list[name][attributes] << "#{adjective}"
     	end
       end
     end
@@ -24,3 +29,4 @@ def nyc_pigeon_organizer(data)
   pigeon_list
   
 end
+nyc_pigeon_organizer(pigeon_data)
