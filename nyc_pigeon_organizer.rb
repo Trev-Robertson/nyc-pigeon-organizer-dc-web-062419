@@ -12,8 +12,8 @@ def nyc_pigeon_organizer(data)
 
           if pigeon_list[name].nil?
             
-            pigeon_list[name] = {attributes: [adjective]}
-          else
+            pigeon_list[name] = {attributes: ["#{adjective}"]}
+          #else
           
           # if data[attributes][adjective].include?(name)
           #   pigeon_list[name][attributes]=[]
